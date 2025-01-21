@@ -1,8 +1,8 @@
-export default{
-    providers:[
-        {
-            domain:"https://full-gar-70.clerk.accounts.dev",
-            applicationID:""
-        }
-    ]
+export default {
+  providers: [
+    {
+      domain: "https://climbing-cattle-3.clerk.accounts.dev/",
+      applicationID: "convex",
+    },
+  ],
 };

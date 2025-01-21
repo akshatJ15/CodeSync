@@ -7,8 +7,9 @@ import { useState } from "react";
 import { api } from "../../../../convex/_generated/api";
 import { useRouter } from "next/navigation";
 import MeetingModal from "@/components/MeetingModal";
+import { SignInButton } from "@clerk/nextjs";
 
-function page() {
+function Page() {
   const router = useRouter();
   const { isInterviewer, isCandidate, isLoading } = useUserRole();
   const interviews = useQuery(api.interviews.getMyInterviews);
@@ -35,6 +36,7 @@ function page() {
 
   return (
     <div>
+      <SignInButton></SignInButton>
       <div className="container max-w-7xl mx-auto p-6">
         {/* WELCOME SECTION */}
         <div className="rounded-lg bg-card p-6 border shadow-sm mb-10">
@@ -80,4 +82,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
